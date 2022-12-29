@@ -222,6 +222,7 @@ nav {
 #home_page {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
@@ -234,19 +235,33 @@ nav {
 }
 
 @keyframes fio {
-    from {
+    0% {
         opacity: 1;
     }
 
-    to {
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
         opacity: 0;
     }
 }
 
 .home_title {
     font-size: 8vw;
-    font-weight: 200;
+    font-weight: 300;
     letter-spacing: 3vw;
+    color: #fff;
+    animation: fio 2s infinite alternate;
+}
+
+.hint {
+    position: absolute;
+    bottom: 5%;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 1rem;
     color: #fff;
     animation: fio 2s infinite alternate;
 }
@@ -549,7 +564,6 @@ footer {
     z-index: -1;
     background: radial-gradient(ellipse 50% 70% at center, #5b5942, #000);
 }
-
 
 @media (max-width: 1024px) {
     html {
